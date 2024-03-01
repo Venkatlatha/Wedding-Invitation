@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .scroll-to-top button {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+        }
+
+
+        .nav-button {
+            color: #ffffff !important;
+        }
+
+        .nav-button:hover {
+            color: #ff8c00 !important;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-toggle {
+            margin-top: 10px;
+        }
+
+        .nav.navbar-nav.navbar-right li {
+            margin-top: 10px;
+        }
+
+        #countdown {
+            background-color: #f5f5f5;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+            color: #14c3c3 !important;
+        }
+
+        #timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e29219;
+        }
+
+        .main-invite {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .main-invite h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .main-invite p {
+            font-size: 18px;
+        }
+
+        .main-date {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .main-date .icon-heart {
+            font-size: 72px;
+            color: red;
+        }
+
+        .main-date .date {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+            .navbar-toggle {
+                margin-top: 20px;
+            }
+
+            .nav.navbar-nav.navbar-right {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .main-invite {
+                margin-top: 50px;
+            }
+
+            .main-invite h1 {
+                font-size: 36px;
+            }
+
+            .main-invite p {
+                font-size: 16px;
+            }
+
+            .main-date {
+                margin-top: 50px;
+            }
+
+            .main-date .icon-heart {
+                font-size: 48px;
+            }
+
+            .main-date .date {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Starts -->
+    <div>
+        <nav class="navbar navbar-default navbar-fixed-top"
+            style="background-color: #121f38!important; color: #ffffff; font-weight: bold;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- <a id="head_name" class="navbar-brand" style="margin-top: 6px; font-family: 'Great Vibes',cursive !important;;" href="#">sVenu&amp;Oliver</a> -->
+                    <h1 class="text-white mb-n2" style="font-family:'Great Vibes',cursive !important; margin-left: 5px;"
+                        data-v-18eb878c="">
+                        Venu
+                        <span class="text-primary" style="color: #ff8c00;" data-v-18eb878c="">&amp;</span>
+                        Latha
+                    </h1>
+                </div>
+                <div class="collapse navbar-collapse bs-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#home" class="anchorLink nav-button" style=" font-weight: bold;">Home</a></li>
+                        <li><a href="#about" class="anchorLink nav-button" style="font-weight: bold;">About</a></li>
+
+                        <li><a href="#event" class="anchorLink nav-button" style=" font-weight: bold;">Event</a></li>
+                        <li><a href="#venue" class="anchorLink nav-button" style="font-weight: bold;">Venue</a></li>
+                        <!-- <li><a href="#family" class="anchorLink nav-button" style="font-weight: bold;">Family</a></li> -->
+                        <li><a href="#gallery" class="anchorLink nav-button" style="font-weight: bold;">Gallery</a></li>
+                        <li><a href="#contact" class="anchorLink nav-button" style=" font-weight: bold;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navigation Ends -->
+
+    <!-- Main Starts -->
+    <div id="home" style="margin-top: 6%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-7">
+                    <div class="main-invite">
+                        <h1 style="color: #ff8c00 !important;">We're<br>getting married</h1>
+                        <p>We are getting married to have and to hold from this day forward, for better for worse, for
+                            richer for poorer, in sickness and in health, to love, honor, and cherish, 'til death do us
+                            part.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-5">
+                    <div class="main-date">
+                        <div class="signal"> <span style="font-weight: bold; color: #000d36;">Marriage On</span></div>
+                        <div class="date" style="color: #1e4b9d !important;"><span class="month"><strong id="time_m">02,
+                                    March</strong></span><br><span class="year"><strong
+                                    id="time_year">2024</strong></span>
+                            <span style="color: #1e9d4d !important;" class="time"><strong id="time_hour">11:41
+                                    PM</strong></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="countdown">
+                    <div class="container">
+                        <h2>Countdown</h2>
+                        <div id="timer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Ends -->
+
+    <!-- About Starts -->
+    <div id="about">
+        <div class="container" style="text-align: center;">
+            <h1 class="text-white mb-n2" style="font-family:'Great Vibes',cursive !important; margin-left: 5px; "
+                data-v-18eb878c="">
+                About <br>Bride
+                <span class="text-primary" style="color: #ff8c00;" data-v-18eb878c="">&amp;</span>
+                Groom
+            </h1>
+            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0"
+                style="background-color: #000d36; color: #ffffff !important;">
+                <div class="col-md-6 p-0 text-center text-md-left">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h3 class="mb-3">The Groom <i class="fa fa-male text-primary pr-3"></i></h3>
+                        <h3 class="mb-3" style="font-size: 30px; color: #14c3c3; font-weight: bolder;">
+                            Venkata
+                            Satyanarayanswamy</h3>
+                        <p class="f-s-1-2-em"></p>
+                        <div class="position-relative"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 p-0" style="min-height: 300px">
+                    <img src="https://raw.githubusercontent.com/Sainikhil639/Wedding-Invitation/main/Venu.jpg"
+                        class="position-absolute w-100 h-100" style="object-fit: cover; height: 300px;">
+                </div>
+
+            </div>
+
+            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0"
+                style="background-color: #ce0671; color: #ffffff !important;">
+                <div class="col-md-6 p-0" style="min-height: 300px">
+                    <img src="https://raw.githubusercontent.com/Sainikhil639/Wedding-Invitation/main/Latha.jpg"
+                        class="position-absolute w-100 h-100" style="object-fit: cover; height: 300px;">
+                </div>
+
+                <div class="col-md-6 p-0 text-center text-md-right">
+                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                        <h3 class="mb-3" style="font-size: 30px; color: #3f014d; font-weight: bolder;">Latha Sree</h3>
+                        <h3 class="mb-3">The Bride <i class="fa fa-female text-primary pr-3"
+                                style="color: #7c0042;"></i></h3>
+                        <p class="f-s-1-2-em"></p>
+                        <div class="position-relative"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container"
+                style="min-height: 80%; min-width: 100%; background-color: #000000; text-align: center; padding-bottom: 10px; font-family:'Great Vibes',cursive !important; margin-left: -15px; margin-right: -15px;">
+                <h3 style="color: #ffffff !important;" class="mb-3">Venu
+                    <span class="text-primary" style="color: #ff8c00; font-size: 16px;" data-v-18eb878c="">weds</span>
+                    Latha
+                </h3>
+                <img src="https://raw.githubusercontent.com/Sainikhil639/Wedding-Invitation/main/both.jpg"
+                    class="position-absolute w-100 h-100" style="object-fit: cover; height: 100%; width: 100%;">
+                <br><br>
+                <video width="100%" height="60%" controls>
+                    <source src="https://raw.githubusercontent.com/Sainikhil639/Wedding-Invitation/main/event.mp4"
+                        type="video/mp4">
+                    Your browser does not support video.
+                </video>
+            </div>
+        </div>
+    </div>
+    <!-- About Ends -->
+
+    <!-- Event Starts -->
+    <div id="event">
+        <div class="container"
+            style="background-color: #e7940446; text-align: center; padding-bottom: 10px; font-family:'Great Vibes',cursive !important;">
+            <h3 style="text-align: center; font-weight: bold; font-size: 30px;">Events</h3>
+            <div class="text-center text-md-left ml-md-3" data-v-18eb878c="">
+                <div class="flex" data-v-18eb878c=""><img
+                        src="https://raw.githubusercontent.com/Sainikhil639/Wedding-Invitation/main/event.png" alt=""
+                        class="img-fluid mb-4 img-350" style="height: 200px;" data-v-18eb878c=""></div>
+                <h2 style="color: #965c00; font-weight: bolder;">Marriage</h2>
+                <h3 class="mb-2" data-v-18eb878c="">02nd March, 2024</h3>
+                <h4 class="mb-0" data-v-18eb878c="">Evening, 07:00 PM onwards</h4>
+            </div>
+            <div class="text-center text-md-left ml-md-3" data-v-18eb878c="">
+                <div class="flex" data-v-18eb878c=""><img
+                        src="https://raw.githubusercontent.com/Sainikhil639/Wedding-Invitation/main/event-2.webp" alt=""
+                        class="img-fluid mb-4 img-350" style="height: 200px;" data-v-18eb878c=""></div>
+                <h2 style="color: #965c00; font-weight: bolder;">Reception</h2>
+                <h3 class="mb-2" data-v-18eb878c="">06th March, 2024</h3>
+                <h4 class="mb-0" data-v-18eb878c="">Afternoon, 12:00 PM onwards</h4>
+            </div>
+        </div>
+    </div>
+    <!-- Event Ends -->
+
+    <!-- Venue Starts -->
+    <div id="venue">
+        <div class="container" style="background-color: #abefc446; text-align: center; padding-bottom: 10px;">
+            <h2 style=" font-family:'Great Vibes',cursive !important;">Venue</h2>
+            <h1 style="color: #00491b; font-weight: bolder; font-family: Arial, Helvetica, sans-serif !important;">JSK
+                Kalyana Mandapam</h1>
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.6144042510987!2d81.1364291!3d16.795849099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a366b86e3c7328b%3A0xa4344915f7b16de!2sJ%20S%20K%20Gardens!5e0!3m2!1sen!2sin!4v1709109385987!5m2!1sen!2sin"
+                    height="250" allowfullscreen="allowfullscreen" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    style="border: 0;margin: auto;z-index: -200;width: 100% !important;" data-v-18eb878c=""></iframe>
+
+            </div>
+
+            <a href="https://maps.app.goo.gl/vATNcknH6woJzhbV7" target="_blank" class="btn btn-success"
+                style="font-weight: bold;">Get
+                Directions</a>
+        </div>
+    </div>
+
+    <div class="container py-5" data-v-18eb878c="" style="background-color: #e7940446;">
+        <div class="section-title position-relative text-center" data-v-18eb878c="">
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px; " data-v-18eb878c=""></h6>
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px; color: #ff7300; font-size: 25px;"
+                data-v-18eb878c="">
+                Friends &amp; Family
+            </h6>
+            <h1 class="display-4" style="font-family:'Great Vibes',cursive !important; font-size: 25px !important;"
+                data-v-18eb878c="">
+                Invitee's
+            </h1>
+            <h1 class="display-4 mb-3" style="font-family:'Great Vibes',cursive !important; font-size: 20px !important;"
+                data-v-18eb878c="">
+                hello
+                <span id="guest-name-main-page" class="guest-name" data-v-18eb878c="">Dear,</span>
+            </h1>
+            <h1 class="display-5"
+                style="font-family:'Great Vibes',cursive !important;letter-spacing:2px;font-weight:100 !important; font-size: 24px !important;"
+                data-v-18eb878c="">Your presence and blessings will be extremely important for us</h1>
+        </div>
+    </div>
+
+    <!-- Venue Ends -->
+
+    <!-- Family Starts -->
+    <!-- <div id="family">
+        <div class="container">
+            <h2>Family</h2>
+        </div>
+    </div> -->
+    <!-- Family Ends -->
+
+    <!-- Gallery Starts -->
+    <div id="gallery">
+        <div class="container"
+            style="background-color: #d6b305d4; text-align: center; padding-bottom: 10px; font-family:'Great Vibes',cursive !important;">
+            <h3 style="text-align: center; font-weight: bold; font-size: 30px;">Gallery</h3>
+            <input style="outline: 0; margin: 10px;" type="password" id="passwordInput" placeholder="Enter password">
+            <button style="outline: 0; margin: 10px;" class="btn btn-primary" onclick="verifyPassword()" style="font-weight: bold;">Verify</button><br>
+            <!-- <button style="outline: 0; margin: 10px; display: none;" class="btn btn-success"
+                onclick="showMedia('image', 'path_to_your_image1.jpg')">Picture-1</button>
+            <button style="outline: 0; margin: 10px; display: none;" class="btn btn-success"
+                onclick="showMedia('image', 'path_to_your_image2.jpg')">Picture-2</button> -->
+                <button style="outline: 0; margin: 10px; display: none;" class="btn btn-success" onclick="showMedia('video', 'https://raw.githubusercontent.com/Sainikhil639/Wedding-Invitation/main/haldi.mp4')">Haldi</button>
+
+            <!-- <button style="outline: 0; margin: 10px; display: none;" class="btn btn-success"
+                onclick="showMedia('video', 'path_to_your_video2.mp4')">Video-2</button> -->
+           
+
+            <img id="displayedImage" src="" class="position-absolute w-100 h-100"
+                style="object-fit: cover; height: 100%; width: 100%; display: none;"> <br><br>
+            <video id="displayedVideo" class="position-absolute w-100 h-100"
+                style="height: 100%; width: 100%; display: none;" controls>
+                Your browser does not support the video tag.
+            </video>
+            <br><br><br><br><br>
+        </div>
+    </div>
+    <!-- Gallery Ends -->
+
+    <!-- Contact Starts -->
+    <div id="contact">
+        <div class="container"
+            style="color: #ffffff !important; background-color: #060028; text-align: center; padding-bottom: 10px; color: rgb(13, 8, 50);">
+            <h1 class="display-3 text-white" style="font-family:'Great Vibes',cursive !important;" data-v-18eb878c="">
+                Thank You
+            </h1>
+            <div>
+                <span>BGR: <a href="tel:+919989276947">9949565458</a></span>
+                <a href="tel:+919949565458" class="btn btn-primary">Call</a>
+            </div>
+            <br />
+            <div>
+                <span>Mani: <a href="tel:+919989276947">9989276947</a></span>
+                <a href="tel:+919989276947" class="btn btn-primary">Call</a>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Ends -->
+
+    <!-- Footer Starts -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copy">
+                        <p class="mb-1">© Wedding Invitation</p>
+                        <a style="display: none;" class="mb-1" href="https://www.linkedin.com/in/sai-nikhil-898060175/"
+                            target="_blank">© Designed by Sai Nikhil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Ends -->
+
+    <!-- jQuery and Bootstrap JS -->
+    <!-- Add this before the closing body tag -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        // Set the wedding date (month is 0-based, so January is 0)
+        // var weddingDate = new Date(2024, 2, 2);
+        var weddingDate = new Date(2024, 2, 2, 23, 41, 0);
+
+        // Function to update the countdown timer
+        function updateCountdown() {
+            var now = new Date();
+            var timeDifference = weddingDate - now;
+
+            // Check if the wedding date has passed
+            if (timeDifference < 0) {
+                document.getElementById("timer").innerHTML = "The wedding has already occurred!";
+            } else {
+                // Calculate days, hours, minutes, and seconds
+                var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                // Display the countdown timer
+                document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            }
+
+            // Update the timer every second
+            setTimeout(updateCountdown, 1000);
+        }
+
+        // Call the updateCountdown function to start the countdown
+        updateCountdown();
+
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        var passwordEntered = false;
+
+        function verifyPassword() {
+            var password = document.getElementById('passwordInput').value;
+            if (password === '11223344') { // Replace 'your_password' with the actual password
+                passwordEntered = true;
+                document.querySelectorAll('.btn-success').forEach(function (button) {
+                    button.style.display = 'inline-block';
+                });
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+
+        function showMedia(type, src) {
+            if (!passwordEntered) {
+                alert('Please verify your password first.');
+                return;
+            }
+
+            if (type === 'image') {
+                document.getElementById('displayedImage').src = src;
+                document.getElementById('displayedImage').style.display = 'block';
+                document.getElementById('displayedVideo').style.display = 'none';
+            } else if (type === 'video') {
+                document.getElementById('displayedVideo').src = src;
+                document.getElementById('displayedVideo').style.display = 'block';
+                document.getElementById('displayedImage').style.display = 'none';
+            }
+        }
+    </script>
+
+    <!-- Floating button to scroll to top -->
+    <div class="scroll-to-top">
+        <button onclick="scrollToTop()"
+            style="background-color: #0c1b3140 !important; color: #ffffff61; border-width: 0px; outline: none;"
+            class="btn"><i class="fa fa-arrow-up"></i></button>
+    </div>
+</body>
+
+</html>
+</body>
+
+</html>
